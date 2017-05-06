@@ -20,6 +20,12 @@ namespace WebApplication1.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        static ApplicationDbContext()
+        {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ApplicationDbContext>());
+        }
+        public DbSet<Game> Games { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -27,7 +33,9 @@ namespace WebApplication1.Models
 
         public static ApplicationDbContext Create()
         {
+
             return new ApplicationDbContext();
         }
+
     }
 }

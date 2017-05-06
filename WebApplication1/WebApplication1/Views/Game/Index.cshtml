@@ -1,0 +1,22 @@
+﻿@model WebApplication1.Models.Game
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Game</h2>
+<div class="row">
+    <a href="@Url.Action("Step",new { cellNum = 0,gameId = Model.Id })" class="btn" style="widt">@Model.Grid[0]</a>
+    <a href="@Url.Action("Step",new { cellNum = 1,gameId = Model.Id })" class="btn">@Model.Grid[1]</a>
+    <a href="@Url.Action("Step",new { cellNum = 2,gameId = Model.Id })" class="btn">@Model.Grid[2]</a>
+</div>
+<div class="row">
+    <a href="@Url.Action("Step",new { cellNum = 3,gameId = Model.Id })" class="btn">@Model.Grid[3]</a>
+    <a href="@Url.Action("Step",new { cellNum = 4,gameId = Model.Id})" class="btn">@Model.Grid[4]</a>
+    <a href="@Url.Action("Step",new { cellNum = 5,gameId = Model.Id })" class="btn">@Model.Grid[5]</a>
+</div>
+<div class="row">
+    <a href="@Url.Action("Step",new { cellNum = 6,gameId = Model.Id })" class="btn">@Model.Grid[6]</a>
+    <a href="@Url.Action("Step",new { cellNum = 7,gameId = Model.Id })" class="btn">@Model.Grid[7]</a>
+    <a href="@Url.Action("Step",new { cellNum = 8,gameId = Model.Id })" class="btn">@Model.Grid[8]</a>
+</div>
